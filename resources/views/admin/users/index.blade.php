@@ -20,7 +20,7 @@
             <th scope="col">Updated_At</th>
           </tr>
         </thead>
-        {{-- @if($users)
+        @if($users)
             @foreach ($users as $user)
             <tbody>
               <tr>
@@ -30,14 +30,13 @@
               <td>{{$user->email}}</td>
               <td>{{$user->role->name}}</td>
               <td>{{$user->is_active==1?'Active':'Not Active'}}</td>
-
               <td>{{$user->created_at->diffForHumans()}}</td>
               <td>{{$user->updated_at->diffForHumans()}}</td>
               </tr>
             </tbody>
             
             @endforeach
-            @endif --}}
+            @endif
           </table>
       
         </div>
