@@ -50,11 +50,7 @@
                     {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
                 </div>
                     
-            
-              
-                    
-            
-                {!! Form::close() !!} 
+    {!! Form::close() !!} 
 
 
             

@@ -557,8 +557,8 @@
                 <i class="fa fa-book"></i><span>Users</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ url('/admin/users')}}">All Users</a>
-              <a class="dropdown-item" href="{{ url('/users/create')}}">Create Users</a>
+              <a class="dropdown-item" href="{{ route('users.index')}}">All Users</a>
+              <a class="dropdown-item" href="{{ route('users.create')}}">Create Users</a>
             </div>
           </li>
 
