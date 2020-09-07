@@ -2,7 +2,14 @@
 
 
 @section('usersContent')
-<div class="jumbotron">
+@if(Session::has('deleted_user'))
+  <div class="alert alert-danger" role="alert">
+    {{ session('deleted_user')}}
+  </div>
+
+@endif
+
+<div class="container p-4 bg-light">
 
     
     <h1>Users</h1>

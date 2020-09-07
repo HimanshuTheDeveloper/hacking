@@ -16,7 +16,7 @@
     
     <div class="col-sm-9">
         
-        <div class="container bg-light">
+        <div class="container bg-light col-sm-12 p-4">
             
             <h3>Edit Users</h3>
 
@@ -60,10 +60,20 @@
                 </div>
                 
                 <div class="btn-group pull-right">
-                    {!! Form::submit('Submit', ['class' => 'btn btn-success']) !!}
+                    {!! Form::submit('Update User', ['class' => 'btn btn-outline-success']) !!}
                 </div>
                     
-            {!! Form::close() !!} 
+            {!! Form::close() !!}
+            
+            
+            {!! Form::open(['method' => 'DELETE', 'route' => ['users.destroy', $user->id]]) !!}
+            
+                <div class="btn-group pull-right">
+                    {!! Form::submit('Delete User', ['class' => 'btn btn-outline-danger']) !!}
+                </div>
+            
+            {!! Form::close() !!}
+       
         </div>
 
     </div>

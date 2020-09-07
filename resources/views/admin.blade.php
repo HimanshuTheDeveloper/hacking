@@ -516,7 +516,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-      <a href="{{ url('/') }}">Dasboard</a>
+      <a href="{{ url('/') }}">Dashboard</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -528,7 +528,7 @@
         </div>
         <div class="user-info">
           <span class="user-name">
-            {{-- {{Auth::user()->name}} --}}
+            {{Auth::user()->name}}
           
           </span>
           <span class="user-role">Administrator</span>
