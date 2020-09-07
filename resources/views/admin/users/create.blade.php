@@ -27,8 +27,6 @@
                     <small class="text-danger">{{ $errors->first('role_id') }}</small>
                 </div>
 
-           
-
                 <div class="form-group{{ $errors->has('is_active') ? ' has-error' : '' }}">
                     {!! Form::label('is_active', 'Status') !!}
                     {!! Form::select('is_active', array(1=>'Active' ,0=>'Not Active' ), null, ['id' => 'is_active', 'class' => 'form-control', 'required' => 'required',]) !!}

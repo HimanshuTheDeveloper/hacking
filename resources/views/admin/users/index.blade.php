@@ -20,22 +20,22 @@
             <th scope="col">Updated_At</th>
           </tr>
         </thead>
-        @if($users)
-            @foreach ($users as $user)
-            <tbody>
-              <tr>
-              <td>{{$user->id}}</td>
-              <td><img height="50" src="{{$user->photo ? $user->photo->file : 'No User Photo' }}" alt=""></td>
-              <td>{{$user->name}}</td>
-              <td>{{$user->email}}</td>
-              <td>{{$user->role->name}}</td>
-              <td>{{$user->is_active==1?'Active':'Not Active'}}</td>
-              <td>{{$user->created_at->diffForHumans()}}</td>
-              <td>{{$user->updated_at->diffForHumans()}}</td>
-              </tr>
-            </tbody>
-            
-            @endforeach
+          @if($users)
+              @foreach ($users as $user)
+              <tbody>
+                <tr>
+                <td>{{$user->id}}</td>
+                <td><img height="50" src="{{$user->photo ? $user->photo->file : 'No User Photo' }}" alt=""></td>
+                <td><a href="{{url("/users/$user->id/edit")}}">{{$user->name}}</a></td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->role->name}}</td>
+                <td>{{$user->is_active==1?'Active':'Not Active'}}</td>
+                <td>{{$user->created_at->diffForHumans()}}</td>
+                <td>{{$user->updated_at->diffForHumans()}}</td>
+                </tr>
+              </tbody>
+              
+              @endforeach
             @endif
           </table>
       
