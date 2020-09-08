@@ -574,8 +574,8 @@
                 <i class="fa fa-book"></i><span>Posts</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">All Posts</a>
-              <a class="dropdown-item" href="#">Create Posts</a>
+              <a class="dropdown-item" href="{{ route('posts.index') }}">All Posts</a>
+              <a class="dropdown-item" href="{{ route('posts.create') }}">Create Posts</a>
             </div>
           </li>
 
@@ -593,8 +593,8 @@
                 <i class="fa fa-book"></i><span>Categories</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">All Categories</a>
-              <a class="dropdown-item" href="#">Create Categories</a>
+              <a class="dropdown-item" href="{{ route('users.create')}}">All Categories</a>
+              <a class="dropdown-item" href="{{ route('users.create')}}">Create Categories</a>
             </div>
           </li>
 
