@@ -528,7 +528,7 @@
         </div>
         <div class="user-info">
           <span class="user-name">
-            {{Auth::user()->name}}
+            {{-- {{Auth::user()->name}} --}}
           
           </span>
           <span class="user-role">Administrator</span>

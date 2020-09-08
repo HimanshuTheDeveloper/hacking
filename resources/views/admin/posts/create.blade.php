@@ -16,7 +16,7 @@
             
             <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
                 {!! Form::label('category_id', 'Category') !!}
-                {!! Form::select('category_id', [1=>'PHP' , 2=>'Javascript'], null, ['id' => 'category_id', 'class' => 'form-control']) !!}
+                {!! Form::select('category_id',  [''=>'Choose Option'] + $categories, null, ['id' => 'category_id', 'class' => 'form-control']) !!}
                 <small class="text-danger">{{ $errors->first('category_id') }}</small>
             </div>
             

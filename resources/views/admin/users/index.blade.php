@@ -2,13 +2,12 @@
 
 
 @section('usersContent')
-@if(Session::has('deleted_user'))
-  <div class="alert alert-danger" role="alert">
-    {{ session('deleted_user')}}
-  </div>
+    @if(Session::has('deleted_user'))
+      <div class="alert alert-danger" role="alert">
+        {{ session('deleted_user')}}
+      </div>
 
-@endif
-
+    @endif
 <div class="container p-4 bg-light">
 
     
