@@ -593,7 +593,7 @@
                 <i class="fa fa-book"></i><span>Categories</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('users.create')}}">All Categories</a>
+              <a class="dropdown-item" href="{{ route('category.index')}}">All Categories</a>
               <a class="dropdown-item" href="{{ route('users.create')}}">Create Categories</a>
             </div>
           </li>

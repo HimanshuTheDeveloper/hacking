@@ -1,8 +1,18 @@
 @extends('admin')
 
 @section('content')
+    <div class="row">
 
-    <div class="container bg-light p-4">
+   
+   
+   
+        <div class="col-sm-3">
+
+        <img height="150" src="{{$post->photo ? $post->photo->file : 'No photo' }}" alt="" class="img-responsive rounded ">
+
+    </div>
+
+    <div class="col-sm-9 bg-light">
         <h1>Edit Post</h1>
 
         {!! Form::model($post, ['method' => 'PATCH','action'=>['AdminPostsController@update' , $post->id], 'class' => 'form-horizontal' , 'files'=> true]) !!}
@@ -50,5 +60,5 @@
     
 
     </div>
-    
+</div>  
 @endsection
