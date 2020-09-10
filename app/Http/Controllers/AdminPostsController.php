@@ -120,7 +120,11 @@ class AdminPostsController extends Controller
         //
         $post = Post::findOrFail($id);
      
-        // File::delete(public_path($post->photo->file));
+    
+        // $photo = Photo::findOrFail($id);
+        // unlink(public_path() . $photo->file);
+        // $photo->delete();
+       
         $post->delete();
 
         

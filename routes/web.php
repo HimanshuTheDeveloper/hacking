@@ -26,4 +26,5 @@ Route::resource('/admin','AdminController');
 Route::resource('/users','AdminUsersController');
 Route::resource('/posts','AdminPostsController');
 Route::resource('/category','AdminCategoriesController');
+Route::resource('/media','MediaController');
 

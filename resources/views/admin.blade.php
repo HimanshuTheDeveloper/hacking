@@ -16,6 +16,7 @@
         crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+    @yield('styles')
     <style>
         @keyframes swing {
       0% {
@@ -528,7 +529,7 @@
         </div>
         <div class="user-info">
           <span class="user-name">
-            {{-- {{Auth::user()->name}} --}}
+            {{Auth::user()->name}}
           
           </span>
           <span class="user-role">Administrator</span>
@@ -598,15 +599,18 @@
             </div>
           </li>
 
-
-
-
-          <li>
-            <a href="{{ url('/admin/users')}}">
-              <i class="fa fa-folder"></i>
-              <span>Users</span>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{{ url('/admin')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-book"></i><span>Media</span>
             </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('media.index')}}">All Media</a>
+              <a class="dropdown-item" href="{{ route('media.create')}}">Create Media</a>
+            </div>
           </li>
+
+
+
         </ul>
       </div>
       <!-- sidebar-menu  -->
@@ -640,11 +644,11 @@
       
     @yield('content')
     @yield('usersContent')
-    
   </main>
   <!-- page-content" -->
 </div>
 <!-- page-wrapper -->
+    @yield('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
